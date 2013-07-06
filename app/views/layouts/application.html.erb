@@ -7,16 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<% if current_user %>
-  <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
-<% else %>
-  <%= link_to 'Sign in', new_user_session_path %>
-  <%= link_to 'Sign up for small group', new_user_registration_path %>
-<% end %>
-<%= yield %>
+  <div class="container">
+    <header>
+    <h4>HIGHLANDS SMALL GROUPS</h4>
+    <ul class="nav nav-pills pull-right">
+      <% if current_user %>
+        <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
+      <% else %>
+        <li class="<%= 'active' if current_page?(new_user_session_path) %>"><%= link_to "Sign in", new_user_session_path %></li>
+        <li class="<%= 'active' if current_page?(new_user_registration_path) %>"><%= link_to "Sign up", new_user_registration_path %></li>
+      <% end %>
+    </ul>
+    </header>
+    <%= yield %>
+  </div><!-- container-fluid -->
 
 </body>
 </html>
