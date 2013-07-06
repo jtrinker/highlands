@@ -1,7 +1,27 @@
-body {
-	background-color: #4f92c1;
+.nav-pills > .active > a, .nav-pills > .active > a:hover, .nav-pills > .active > a:focus {
+    background-color: #eee;
+    color: #000;
 }
 
-header h4 {
-	float: left;
+header {
+	background-color: #5092c2;
+	height: 45px;
+	width: 100%;
+	padding-top: 5px;
+
+	h4 {
+		float: left;
+		margin-top: 8px;
+	}
+
+	ul.nav {
+        li a {
+        	color: #000;
+        }
+        .welcome {
+        	color: #eee;
+        	margin-top: 7px;
+			margin-right: 39px;
+        }
+	}
 }
