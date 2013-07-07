@@ -1,4 +1,5 @@
 class Group < ActiveRecord::Base
-  has_many :users, dependent: :destroy
+  has_many :memberships
+  has_many :users, :through => :memberships
   attr_accessible :description, :location, :name
 end
