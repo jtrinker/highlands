@@ -1,0 +1,11 @@
+<%= image_tag("highlands.png") %>
+<hr>
+<ul>
+  <% @groups.each do |group| %>
+  <div class="indiv_group">
+    <li class="name"><h4><%= link_to group.name, group %></h4></li>
+    <li class="location"><%= group.location %></li>
+    <li class="description"><%= group.description %></li>
+  </div><!-- indiv_group -->
+  <% end %>
+</ul>

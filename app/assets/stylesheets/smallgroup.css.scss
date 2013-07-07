@@ -3,15 +3,41 @@
     color: #000;
 }
 
+ul li {
+	list-style-type: none;
+}
+
+li.location {
+	font-weight: 100;
+    margin-bottom: 7px;
+}
+
+.main-container {
+	padding-top: 50px;
+
+	img {
+		margin-left: 21px;
+        margin-bottom: 40px;
+	}
+	hr {
+		margin-top: -35px;
+        margin-left: 21px;
+	}
+	h4 {
+		font-weight: 200;
+	}
+}
+
 header {
 	background-color: #5092c2;
 	height: 45px;
 	width: 100%;
-	padding-top: 5px;
+	padding: 10px;
 
 	h4 {
 		float: left;
 		margin-top: 8px;
+		font-weight: 200;
 	}
 
 	ul.nav {
